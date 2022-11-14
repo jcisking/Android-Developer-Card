@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="Name">Lovee Loeffler</string>
+    <string name="Occupation">Android Developer Bird</string>
+    <string name="PhoneNumber">(123)456-7890</string>
+    <string name="TwitterHandle">\@LoveeDaBird</string>
+    <string name="Email">lovz@yahoo.com</string>
+</resources>
