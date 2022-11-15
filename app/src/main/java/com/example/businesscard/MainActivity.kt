@@ -48,7 +48,7 @@ fun Header() {
 
 
         Image(painter = image, contentDescription = null,
-            modifier = Modifier.width(75.dp)
+            modifier = Modifier.width(90.dp)
             )
         Text(color = Color.White,text = stringResource(id = R.string.Name), fontSize = 40.sp)
         Text(color = Color(0xFF3ddc84),text = stringResource(id = R.string.Occupation))
@@ -60,7 +60,6 @@ fun Header() {
 @Composable
 fun ColumnScope.Body() {
     Column(modifier = Modifier
-        .background(Color.Red)
         .weight(2.5f)
         .fillMaxWidth()) {
 
@@ -68,21 +67,21 @@ fun ColumnScope.Body() {
 
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 40.dp)) {
             Icon(tint = Color(0xFF3ddc84), painter = painterResource(id = R.drawable.phone_black_24dp), contentDescription = null)
-            Text(color = Color.White, text = stringResource(id = R.string.PhoneNumber))
+            Text(modifier = Modifier.padding(start = 22.dp), color = Color.White, text = stringResource(id = R.string.PhoneNumber))
         }
 
         Divider(color = Color.White, thickness = .5.dp)
 
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 40.dp)) {
             Icon(tint = Color(0xFF3ddc84), painter = painterResource(id = R.drawable.share_black_24dp), contentDescription = null)
-            Text(color = Color.White, text = stringResource(id = R.string.TwitterHandle))
+            Text(modifier = Modifier.padding(start = 22.dp), color = Color.White, text = stringResource(id = R.string.TwitterHandle))
         }
 
         Divider(color = Color.White, thickness = .5.dp)
 
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 40.dp)) {
             Icon(tint = Color(0xFF3ddc84), painter = painterResource(id = R.drawable.email_black_24dp), contentDescription = null)
-            Text(color = Color.White, text = stringResource(id = R.string.Email))
+            Text(modifier = Modifier.padding(start = 22.dp), color = Color.White, text = stringResource(id = R.string.Email))
         }
 
 
