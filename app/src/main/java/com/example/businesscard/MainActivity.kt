@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 
@@ -30,9 +31,9 @@ class MainActivity : ComponentActivity() {
             Column(modifier = Modifier
                 .background(Color(0xFF234657))
                 .fillMaxSize()) {
-                Spacer(modifier = Modifier.weight(1f))
+                Spacer(modifier = Modifier.weight(3f))
                 Header()
-                Spacer(modifier = Modifier.weight(1f))
+                Spacer(modifier = Modifier.weight(3f))
                 Body()
             }
         }
@@ -58,25 +59,33 @@ fun Header() {
 
 @Composable
 fun ColumnScope.Body() {
-    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
+    Column(modifier = Modifier
         .background(Color.Red)
-        .weight(1f)
+        .weight(2.5f)
         .fillMaxWidth()) {
-        Row() {
+
+        Divider(color = Color.White, thickness = .5.dp)
+
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 40.dp)) {
             Icon(tint = Color(0xFF3ddc84), painter = painterResource(id = R.drawable.phone_black_24dp), contentDescription = null)
             Text(color = Color.White, text = stringResource(id = R.string.PhoneNumber))
-            
         }
-        Divider(color = Color.White, thickness = 1.dp)
-        Row() {
+
+        Divider(color = Color.White, thickness = .5.dp)
+
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 40.dp)) {
             Icon(tint = Color(0xFF3ddc84), painter = painterResource(id = R.drawable.share_black_24dp), contentDescription = null)
             Text(color = Color.White, text = stringResource(id = R.string.TwitterHandle))
-            
         }
-        Row() {
+
+        Divider(color = Color.White, thickness = .5.dp)
+
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 9.dp, bottom = 9.dp, start = 40.dp)) {
             Icon(tint = Color(0xFF3ddc84), painter = painterResource(id = R.drawable.email_black_24dp), contentDescription = null)
             Text(color = Color.White, text = stringResource(id = R.string.Email))
         }
+
+
     }
 
 
