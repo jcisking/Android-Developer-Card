@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -48,7 +49,7 @@ fun Header() {
 
 
         Image(painter = image, contentDescription = null,
-            modifier = Modifier.width(90.dp)
+            modifier = Modifier.width(90.dp).graphicsLayer(rotationZ = 45f, rotationY = 50f)
             )
         Text(color = Color.White,text = stringResource(id = R.string.Name), fontSize = 40.sp)
         Text(color = Color(0xFF3ddc84),text = stringResource(id = R.string.Occupation))
